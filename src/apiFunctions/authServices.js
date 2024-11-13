@@ -1,4 +1,4 @@
-const baseUrlApi = process.env.NEXT_PUBLIC_API_URL_BACK_AUTH
+const baseUrlApi = process.env.NEXT_PUBLIC_API_URL
 
 export const register = async (dataRegistre) => {
     try {

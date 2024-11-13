@@ -7,8 +7,4 @@ services:
     ports:
       - "3000:3000"  # Expone el puerto 3000 para acceder al frontend
     networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
+      - minikube

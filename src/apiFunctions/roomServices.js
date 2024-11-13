@@ -1,4 +1,4 @@
-const baseUrlApi = process.env.NEXT_PUBLIC_API_URL_BACK_HOTELS
+const baseUrlApi = process.env.NEXT_PUBLIC_API_URL
 
 export const detailReserver = async (id) => {
     console.log("id 2 -----------------", id)
