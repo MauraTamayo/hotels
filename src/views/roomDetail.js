@@ -1,9 +1,12 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Card, Divider } from '@mui/material';
+import { Box, Typography, Card, Divider, Button } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-// import Carousel from 'react-material-ui-carousel';
-import Image from 'next/image';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Importa los estilos CSS del carrusel
+
+
+// import Image from 'next/image';
 import PeopleIcon from '@mui/icons-material/People';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import SquareFootIcon from '@mui/icons-material/SquareFoot';
@@ -51,14 +54,14 @@ const RoomDetail = ({ id }) => {
       <Header />
       <Box sx={{ padding: 4, backgroundColor: '#070F1B' }}>
         <Card sx={{ backgroundColor: '#070F1B' }} >
-          {/* <Carousel>
-            <Box sx={{ position: 'relative', height: '400px' }}>
-              <Image src={room.imagen} alt={room.nombre} layout="fill" objectFit="cover" />
-            </Box>
-            <Box sx={{ position: 'relative', height: '400px' }}>
-              <Image src={room.imagen_2} alt={room.nombre} layout="fill" objectFit="cover" />
-            </Box>
-          </Carousel> */}
+        <Carousel>
+          <div>
+            <img src={room.imagen} alt={room.nombre} />
+          </div>
+          <div>
+            <img src={room.imagen_2} alt={room.nombre} />
+          </div>
+        </Carousel>
           <Divider sx={{ my: 2, background: "#B3B3B3" }} />
           <Box p={2} sx={{ color: "#fff", backgroundColor: '#070F1B' }}>
             <Typography variant="h5" gutterBottom>{room.nombre}</Typography>
