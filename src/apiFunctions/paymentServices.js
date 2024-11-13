@@ -3,6 +3,7 @@ const baseUrlApi = process.env.NEXT_PUBLIC_API_URL
 
 export const bookingPayment = async (data) => {
     try {
+        console.log(data)
         const response = await fetch(`${baseUrlApi}/payment`, {
             method: "POST",
             body: JSON.stringify(data)

@@ -34,7 +34,9 @@ const RoomDetail = ({ id }) => {
   useEffect(() => {
     const fetchRoomDetail = async () => {
       const data = await detailReserver(id);
+      console.log("id",id)
       setRoom(data);
+      console.log("data",data)
     };
 
     fetchRoomDetail();
@@ -64,7 +66,7 @@ const RoomDetail = ({ id }) => {
           </Box>
           <Divider sx={{ my: 2, background: "#B3B3B3" }} />
           <Grid container spacing={2} sx={{ color: "#929292", backgroundColor: '#070F1B' }}>
-            <Grid item xs={6}>
+            <Grid xs={6}>
               <Typography variant="h6"><PeopleIcon /> Capacidad: {room.capacidad} personas</Typography>
               <Typography variant="h6"><AttachMoneyIcon /> Precio por noche: {room.precio_por_noche} COP</Typography>
               <Typography variant="h6"><SquareFootIcon /> Metros cuadrados: {room.metros_cuadrados} m²</Typography>
@@ -78,7 +80,7 @@ const RoomDetail = ({ id }) => {
               <Typography variant="h6"><TvIcon /> Televisión: {room.tiene_television ? 'Sí' : 'No'}</Typography>
               <Typography variant="h6"><HotTubIcon /> Jacuzzi: {room.tiene_jacuzzi ? 'Sí' : 'No'}</Typography>
             </Grid>
-            <Grid item xs={6}>
+            <Grid xs={6}>
               <Typography variant="h6"><MiniBarIcon /> Minibar: {room.tiene_minibar ? 'Sí' : 'No'}</Typography>
               <Typography variant="h6"><RoomServiceIcon /> Servicio a habitación: {room.tiene_servicio_a_habitacion ? 'Sí' : 'No'}</Typography>
               <Typography variant="h6"><LockIcon /> Caja fuerte: {room.tiene_caja_fuerte ? 'Sí' : 'No'}</Typography>

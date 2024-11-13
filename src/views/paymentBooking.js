@@ -23,7 +23,7 @@ const Payment = () => {
 
   const handlePayment = async () => {
     const paymentDate = dayjs().format('YYYY-MM-DD'); // Formato de fecha requerido
-    const transactionId = Math.floor(10000000 + Math.random() * 90000000).toString(); // ID único de 8 dígitos
+    const transactionId = Math.floor(10000000 + Math.random() * 90000000);
     const paymentData = {
       reserva: reservation.id,
       monto: reservation.room.precio_por_noche * reservation.dias_reservados,

@@ -81,7 +81,7 @@ const Booking = () => {
                     Pagar
                   </Button>
                     )}
-                  <Button sx={{margin: "0 10px", background:"#070F1B" }} variant="contained" onClick={() => handleDetailRoom(reservation.id)}>
+                  <Button sx={{margin: "0 10px", background:"#070F1B" }} variant="contained" onClick={() => handleDetailRoom(reservation.room.id)}>
                     Ver mas Detalle
                   </Button>
                 </Box>
