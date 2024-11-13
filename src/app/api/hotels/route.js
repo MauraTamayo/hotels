@@ -1,6 +1,8 @@
+const baseUrlApi = process.env.NEXT_PUBLIC_API_URL_BACK_HOTELS
+
 export async function GET() {
   try {
-    const response = await fetch("http://host.docker.internal:8088/api/hotels", {
+    const response = await fetch(`${baseUrlApi}/api/hotels`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

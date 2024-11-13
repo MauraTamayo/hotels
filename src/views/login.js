@@ -122,7 +122,7 @@ const Login = () => {
                 </Typography>
                 <FormBoxStyled component="form" onSubmit={handleSubmit} sx={{marginTop: "2rem"}}>
                     <TextFieldBoxStyled
-                        label="username"
+                        label="usuario"
                         variant="outlined"
                         fullWidth
                         margin="normal"
@@ -143,7 +143,7 @@ const Login = () => {
                     <ButtomStyled type="submit" fullWidth variant="contained" disabled={loading} sx={{marginTop: "2rem"}}>
                         {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
                     </ButtomStyled>
-                    <Divider sx={{ marginTop: "2rem", '&::before': { background: "#B3B3B3" }, '&::after': { background: "#B3B3B3" } }}>¿No tienes un cauenta?</Divider >
+                    <Divider sx={{ marginTop: "2rem", '&::before': { background: "#B3B3B3" }, '&::after': { background: "#B3B3B3" } }}>¿No tienes una cuenta?</Divider >
                     <ButtomStyledLink variant="outlined" fullWidth onClick={() => goToRegistry()}>
                         ¡Regístrate aquí!
                     </ButtomStyledLink>

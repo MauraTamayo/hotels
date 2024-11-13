@@ -1,5 +1,7 @@
-// pages/reservations.js
+
 "use client"
+// pages/reservations.js
+
 import React, { useState, useEffect } from 'react';
 import { Box, Typography, Card, CardContent, Divider, Button } from '@mui/material';
 import { useRouter } from 'next/navigation'
@@ -9,7 +11,7 @@ import Header from '@/components/Header';
 const Booking = () => {
   const [reservations, setReservations] = useState([]);
   // ******************************************************user**************
-  const userId = 18; // Número quemado para filtrar por usuario específico
+  const userId = parseInt(process.env.NEXT_PUBLIC_USER); // Número quemado para filtrar por usuario específico
   const router = useRouter();
 
   useEffect(() => {
@@ -18,7 +20,7 @@ const Booking = () => {
         const allReservations = await listReservations();
         console.log("Estos son todas las reservaciones + ",userId ," :" ,  allReservations)
         const userReservations = allReservations.filter(reservation => reservation.usuario === userId);
-        console.log("Estos son todas las reservaciones + ",userId ," :" ,  allReservations)
+        console.log("Estos son todas las reservaciones + ",userId ," :" ,  userReservations)
         setReservations(userReservations);
       } catch (error) {
         console.error('Error fetching reservations:', error);
@@ -26,7 +28,7 @@ const Booking = () => {
     };
 
     fetchReservations();
-  }, []);
+  }, [userId]);
 
   const handleDelete = (index) => {
     const updatedReservations = [...reservations];

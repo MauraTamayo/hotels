@@ -1,3 +1,4 @@
+const baseUrlApi = process.env.NEXT_PUBLIC_API_URL_BACK_HOTELS
 import { NextResponse } from "next/server"
 
 export async function POST(req) {
@@ -11,7 +12,7 @@ export async function POST(req) {
     const data = JSON.stringify(plainPayment)
     console.log("dataPost: ", data)
 
-    const response = await fetch("http://host.docker.internal:8088/api/availability/reservation/pay/", {
+    const response = await fetch(`${baseUrlApi}/api/availability/reservation/pay/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

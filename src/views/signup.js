@@ -138,10 +138,10 @@ const Signup = () => {
       await register(formData);
       router.push('/login');
     } catch (error) {
-      setError(error.message); // Muestra el mensaje específico del error
+      setError(error.message);
     }
   };
-
+  
   return (
     <ContainerBoxStyled component="form" onSubmit={handleSubmit}>
       <BodyBoxStyled>
@@ -185,15 +185,17 @@ const Signup = () => {
             />
           </Grid>
           <Grid size={6}>
-          <StyledSelect
+            <StyledSelect
               name="role"
               multiple
               fullWidth
               value={formData.role}
               onChange={handleChange}
-              renderValue={(selected) => selected.join(', ')}
+              renderValue={(selected) => 
+                selected.map(value => roles.find(role => role.value === value)?.label).join(', ')
+              }
             >
-             {roles.map((option) => (
+              {roles.map((option) => (
                 <MenuItem key={option.value} value={option.value}>
                   {option.label}
                 </MenuItem>

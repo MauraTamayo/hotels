@@ -1,5 +1,5 @@
 "use client"
-import { useRouter } from 'next/navigation'
+
 import {
 	Box,
 	Typography,
@@ -82,7 +82,7 @@ const HotelsDetail = ({id}) => {
 			habitacion: room.id,
 			dias_reservados: numberOfRooms,
 			// ******************************************************user**************
-			usuario: 18,
+			usuario: parseInt(process.env.NEXT_PUBLIC_USER),
 			payment: {}, 
 		  };
 	  

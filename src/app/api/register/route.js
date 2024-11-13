@@ -1,3 +1,4 @@
+const baseUrlApi = process.env.NEXT_PUBLIC_API_URL_BACK_AUTH
 import { NextResponse } from "next/server"
 
 export async function POST(req) {
@@ -8,7 +9,7 @@ export async function POST(req) {
     const data = JSON.stringify(plainForm)
     console.log("dataPost: ", data)
 
-    const response = await fetch("http://host.docker.internal:8080/api/auth/signup", {
+    const response = await fetch(`${baseUrlApi}/api/auth/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
