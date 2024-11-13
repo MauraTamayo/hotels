@@ -1,4 +1,4 @@
-const baseUrlApi = process.env.NEXT_PUBLIC_API_URL
+const baseUrlApi = process.env.NEXT_PUBLIC_API_URL_BACK_HOTELS
 
 export const bookingCreate = async (data) => {
     try {
