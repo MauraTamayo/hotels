@@ -15,8 +15,8 @@ COPY . .
 
 # Establece la variable de entorno
 ENV NEXT_PUBLIC_API_URL=http://localhost:3000/api
-ENV NEXT_PUBLIC_API_URL_BACK_AUTH=http://host.docker.internal:8080
-ENV NEXT_PUBLIC_API_URL_BACK_HOTELS=http://host.docker.internal:8088
+ENV NEXT_PUBLIC_API_URL_BACK_AUTH=http://host.docker.internal:8083
+ENV NEXT_PUBLIC_API_URL_BACK_HOTELS=http://host.docker.internal:8000
 ENV NEXT_PUBLIC_USER=20
 
 # Construye la aplicación
