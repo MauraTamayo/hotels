@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: front-secret
   labels:
-    app: postgres
+    app: front
 data:
   NEXT_PUBLIC_API_URL: http://localhost:3000/api
   NEXT_PUBLIC_API_URL_BACK_AUTH: http://auhtorization:8083
